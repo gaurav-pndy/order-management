@@ -28,14 +28,14 @@ const createOrder = (req, res) => {
   setTimeout(() => {
     const existingOrder = orders.get(orderId);
     if (existingOrder) {
-      existingOrder.status = "Preparing";
+      existingOrder.status = "Preparing your Order...";
     }
   }, 10000);
 
   setTimeout(() => {
     const existingOrder = orders.get(orderId);
     if (existingOrder) {
-      existingOrder.status = "Out for Delivery";
+      existingOrder.status = "Out for Delivery!";
     }
   }, 20000);
 
@@ -48,7 +48,7 @@ const getOrderById = (req, res) => {
   const order = orders.get(id);
 
   if (!order) {
-    return res.status(404).json({ message: "Order not found" });
+    return res.status(404).json({ message: "Order not found!" });
   }
 
   res.json(order);
