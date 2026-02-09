@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:4000/api";
+const API_BASE_URL = "https://order-management-0p8a.onrender.com/api";
 
 export const fetchMenu = async () => {
   const res = await fetch(`${API_BASE_URL}/menu`);
